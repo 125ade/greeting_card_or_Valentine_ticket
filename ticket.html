@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <style media="screen">
+        body {          background-color: lightblue;        }
+        div{
+          position:  absolute ;
+          top: 30%;
+          left: 15%;
+          border: 3px solid white;
+          border-radius: 100px;
+          box-shadow:20px 20px 40px 10px lightpink;
+          width: 70%;
+          padding: 2%;
+          box-sizing: border-box;
+        }
+        h1 {          color: white;          text-align: center;        }
+        h2 {          color: white;          text-align: center;        }
+    </style>
+    <meta charset="utf-8">
+    <title>Time with You</title>
+  </head>
+  <body>
+    <div class="">
+      <h1 id="dis" >..*..</h1>
+      <h2 id="dis2">..*..</h2>
+    </div>
+    <script type="text/javascript">
+      //variabili da cambiare per personalizzazzione
+      //NOTA BENE I MESI VANNO CONTATI DA 0 A 12
+      let giorno_C = 1, mese_C = 1, anno_C = 2000;// giorno del compleanno
+      let giorno_A = 1, mese_A = 1, anno_A = 2000, ora_A = 1, min_A = 1, sec_A = 1; //giorno dell anniversario
+      let msg_compleanno = `stringa 1`;
+      let str =[
+                `stringa n`
+              ];
+      // da qui in poi iniziano le variabili e la parte non necessariamente modificabile
+      let date1 = new Date();
+      let date2 = new Date(`${mese_A}/${giorno_A}/${anno_A} ${ora_A}:${min_A}:${sec_A}`);
+      let timeDiff = Math.abs(date2.getTime() - date1.getTime());
+      let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+      let x = `[Errore]`;
+      let num = Math.trunc(Math.random()*str.length);
+      let eta = date1.getFullYear() - anno_C;
+      if(date1.getMonth()==mese_C && date1.getDate()==giorno_C){
+        x =msg_compleanno +` ${eta}`;
+        console.log('giorno del compleanno anni: ',eta);
+      }else{
+        x = str[num];
+        console.log('stringa posizione: ',num);
+      }
+      document.getElementById('dis').innerHTML = `stringa 3 ${diffDays}`;
+      document.getElementById('dis2').innerHTML = x;
+    </script>
+  </body>
+</html>
