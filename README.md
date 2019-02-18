@@ -12,8 +12,8 @@ single page of html / css / js to send the ticket anywhere. to change the page b
 
 ### set the date
     PLEASE NOTE THE MONTHS GO FROM 0 TO 11
-    [31]let day_C = 18, month_C = 1, year_C = 2000;// birthday
-    [32]let day_A = 1, month_A = 1, year_A = 2000; // anniversary
+    [31]let day_C = 1, month_C = 1, year_C = 1;// birthday
+    [32]let day_A = 1, month_A = 1, year_A = 1; // anniversary
 
 
 ### set the message    
