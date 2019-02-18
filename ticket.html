@@ -18,7 +18,7 @@
         h2 {          color: white;          text-align: center;        }
     </style>
     <meta charset="utf-8">
-    <title>Time with You</title>
+    <title id="tit">Card</title>
   </head>
   <body>
     <div class="">
@@ -27,7 +27,7 @@
     </div>
     <script type="text/javascript">
       //Customization it is a  birthday[true] or a anniversary[false]?
-      let choice = false;
+      let choice = true;
       let day_C = 1, month_C = 1, year_C = 1;// birthday
       let day_A = 1, month_A = 1, year_A = 1; //anniversary
       let msg_birthday = `put the text here , age `;
@@ -44,11 +44,13 @@
         x =msg_birthday +` ${age}`;
         console.log('birthday, age: ',age);
         document.getElementById('dis2').innerHTML = x;
+        document.getElementById('tit').innerHTML = `Birthday Card`;
       }else if(!choice){
         x = str[num];
         console.log(`sentence: \'${x}\'`);
         document.getElementById('dis').innerHTML =  msg_anniversary+`${diffDays}`;
         document.getElementById('dis2').innerHTML = x;
+        document.getElementById('tit').innerHTML = `Anniversary Card`;
       }
     </script>
   </body>
