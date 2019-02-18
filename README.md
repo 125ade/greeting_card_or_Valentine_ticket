@@ -5,6 +5,9 @@ single page of html / css / js to send the ticket anywhere. to change the page b
 
 
 # for beginners
+open the ticket.html file in a text editor and modify it following the guidelines listed below
+
+
 ### choiche birthday or anniversary
     [30] let choice = false;
     change for [birthday = true] or a [anniversary = false]
