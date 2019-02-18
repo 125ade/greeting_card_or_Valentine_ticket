@@ -16,13 +16,14 @@ single page of html / css / js to send the ticket anywhere. to change the page b
     [32]let day_A = 1, month_A = 1, year_A = 2000; // anniversary
 
 
-### set the message
-    put a message
+### set the message    
+    write the message
     [33]  let msg_birthday = `put the text here , age `;
     [34]  let msg_anniversary = `put the text here , day `;
 
 
-### set love message
+### set love message: [only if you have set the choice variable to false]
+    you can add as many messages as you want
     [35]  let str =[`put the text here 1`,`put the text here 2`,`put the text here 3`];
 
 
