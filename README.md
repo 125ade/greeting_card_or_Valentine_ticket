@@ -28,3 +28,8 @@ single page of html / css / js to send the ticket anywhere. to change the page b
 
 
 # now save and send the html file to whoever you want
+
+
+
+# License
+This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details
