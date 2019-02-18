@@ -22,35 +22,34 @@
   </head>
   <body>
     <div class="">
-      <h1 id="dis" >..*..</h1>
-      <h2 id="dis2">..*..</h2>
+      <h1 id="dis" ></h1>
+      <h2 id="dis2"></h2>
     </div>
     <script type="text/javascript">
-      //variabili da cambiare per personalizzazzione
-      //NOTA BENE I MESI VANNO CONTATI DA 0 A 12
-      let giorno_C = 1, mese_C = 1, anno_C = 2000;// giorno del compleanno
-      let giorno_A = 1, mese_A = 1, anno_A = 2000, ora_A = 1, min_A = 1, sec_A = 1; //giorno dell anniversario
-      let msg_compleanno = `stringa 1`;
-      let str =[
-                `stringa n`
-              ];
-      // da qui in poi iniziano le variabili e la parte non necessariamente modificabile
+      //Customization it is a  birthday[true] or a anniversary[false]?
+      let choice = false;
+      let day_C = 18, month_C = 1, year_C = 2000;// birthday
+      let day_A = 1, month_A = 1, year_A = 2000; //anniversary
+      let msg_birthday = `put the text here , age `;
+      let msg_anniversary = `put the text here , day `;
+      let str =[`put the text here 1`,`put the text here 2`,`put the text here 3`];
       let date1 = new Date();
-      let date2 = new Date(`${mese_A}/${giorno_A}/${anno_A} ${ora_A}:${min_A}:${sec_A}`);
+      let date2 = new Date(`${month_A}/${day_A}/${year_A}`);
       let timeDiff = Math.abs(date2.getTime() - date1.getTime());
       let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      let x = `[Errore]`;
+      let x = `[Error]`;
       let num = Math.trunc(Math.random()*str.length);
-      let eta = date1.getFullYear() - anno_C;
-      if(date1.getMonth()==mese_C && date1.getDate()==giorno_C){
-        x =msg_compleanno +` ${eta}`;
-        console.log('giorno del compleanno anni: ',eta);
-      }else{
+      let age = date1.getFullYear() - year_C;
+      if(choice && date1.getMonth()==month_C && date1.getDate()==day_C){
+        x =msg_birthday +` ${age}`;
+        console.log('birthday, age: ',age);
+        document.getElementById('dis2').innerHTML = x;
+      }else if(!choice){
         x = str[num];
-        console.log('stringa posizione: ',num);
+        console.log(`sentence: \'${x}\'`);
+        document.getElementById('dis').innerHTML =  msg_anniversary+`${diffDays}`;
+        document.getElementById('dis2').innerHTML = x;
       }
-      document.getElementById('dis').innerHTML = `stringa 3 ${diffDays}`;
-      document.getElementById('dis2').innerHTML = x;
     </script>
   </body>
 </html>
