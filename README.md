@@ -7,6 +7,11 @@ single page of html / css / js to send the ticket anywhere. to change the page b
 # for beginners
 open the ticket.html file in a text editor and modify it following the guidelines listed below
 
+    
+### change the color of background
+    [5]  body {          background-color: lightgreen;        }  in this line change the color of background
+    [12] box-shadow:20px 20px 40px 10px green;                   in this line the color of the shading changes
+
 
 ### choiche birthday or anniversary
     [30] let choice = false;
@@ -29,11 +34,6 @@ open the ticket.html file in a text editor and modify it following the guideline
     you can add as many messages as you want
     [35]  let str =[`put the text here 1`,`put the text here 2`,`put the text here 3`];
     
-    
-### change the color of background
-    [5]  body {          background-color: lightgreen;        }  in this line change the color of background
-    [12] box-shadow:20px 20px 40px 10px green;                   in this line the color of the shading changes
-
 
 # now save and send the html file to whoever you want
 
